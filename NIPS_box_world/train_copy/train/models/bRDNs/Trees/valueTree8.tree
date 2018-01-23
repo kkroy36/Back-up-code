@@ -1,0 +1,7 @@
+setParam: stringsAreCaseSensitive = true.
+
+usePrologVariables: true.
+
+
+(value(A, 4.440892098500626E-16) :-  /* #pos=8 */ tIn(_, source, A)).
+value(_, 0) /* #pos=6 */ .

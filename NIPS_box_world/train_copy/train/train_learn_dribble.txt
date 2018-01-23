@@ -1,0 +1,405 @@
+% Running on host: Vigneshs-MacBook-Pro
+
+% Switching to VarIndicator = uppercase.
+
+% Unset'ing VarIndicator.
+
+% Calling ILPouterLoop from createRegressionOuterLooper.
+
+% getInputArgWithDefaultValue: args=[train/train_pos.txt, train/train_neg.txt, train/train_bk.txt, train/train_facts.txt]
+%  for N=0: args[N]=train/train_pos.txt
+
+% getInputArgWithDefaultValue: args=[train/train_pos.txt, train/train_neg.txt, train/train_bk.txt, train/train_facts.txt]
+%  for N=1: args[N]=train/train_neg.txt
+
+% getInputArgWithDefaultValue: args=[train/train_pos.txt, train/train_neg.txt, train/train_bk.txt, train/train_facts.txt]
+%  for N=2: args[N]=train/train_bk.txt
+
+% getInputArgWithDefaultValue: args=[train/train_pos.txt, train/train_neg.txt, train/train_bk.txt, train/train_facts.txt]
+%  for N=3: args[N]=train/train_facts.txt
+
+% Welcome to the WILL ILP/SRL systems.
+
+
+% Switching to VarIndicator = uppercase.
+
+% Unset'ing VarIndicator.
+% Reading background theory from dir: null
+
+% Switching to VarIndicator = uppercase.
+
+***** Warning: % Since this is the first setting of the notation for variables, will keep:
+%   variableIndicator = uppercase *****
+
+% [ LazyGroundClauseIndex ]  Building full index for mode/1 with 1 assertions.
+% LoadAllModes() called.  Currently loaded modes: []
+% [ LazyGroundClauseIndex ]  Building full index for sameAs/2 with 2 assertions.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for exp/3.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for log/3.
+% LoadAllLibraries() called.  Currently loaded libraries: [listsInLogic, differentInLogic, modes_arithmeticInLogic, inlines_comparisonInLogic, modes_listsInLogic, inlines_differentInLogic, modes_differentInLogic, arithmeticInLogic, inlines_listsInLogic, modes_comparisonInLogic, comparisonInLogic, inlines_arithmeticInLogic]
+
+%  Read the facts.
+%  Have read 54 facts.
+
+%  LearnOneClause initialized.
+
+% The outer looper has been created.
+
+% Initializing the ILP inner looper.
+% Have read 9 examples from 'train' [train/train*].
+
+% NEW target:                 value(D)
+%  targetPred:                value/1
+%  targetArgTypes:            signature = [const], types = [+State]
+%  targets:                   [value(D)]
+%  targetPredicates:          [value/1]
+%  targetArgSpecs:            [[D[+State]]]
+%  variablesInTargets:        [[D]]
+
+% Started collecting constants
+
+% Collecting the types of constants.
+
+% Looking at the training examples to see if any types of new constants can be inferred.
+% Time to collect constants: 2 milliseconds
+% Time to collect examples: 0 seconds
+
+% Read 9 pos examples and 0 neg examples.
+% Time to init learnOneClause: 16 milliseconds
+% Old dirnull
+Setting model dir
+
+% Have 9 'raw' positive examples and kept 9.
+% Have 0 'raw' negative examples and kept 0.
+% No neg ex for value
+
+% processing backup's for value
+%  POS EX = 9
+%  NEG EX = 0
+
+% Memory usage by WILLSetup (just counts # targets?):
+%  |backupPosExamples| = 1
+%  |backupNegExamples| = 1
+%  |predicatesAsFacts| = 0
+%  |addedToFactBase|   = 0
+train/models/
+File: train/advice.txt doesnt exist.Hence no advice loaded
+
+% Learn model for: value
+% Kept 9 of the 9 positive examples.
+% Kept 0 of the 0 negative examples.
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:45.85833275802361
+Set score:0.0025
+% Dataset size: 9
+Computing probabilities
+prob time:1 milliseconds
+No hidden examples for : value
+Time to build dataset: 1 milliseconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:45.85833275802361
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+***** Warning: % Have only 9 positive examples, so cannot choose 10 of them. *****
+
+
+% Have these 9 positive seeds: 0 1 2 3 4 5 6 7 8
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% LearnOneClause Parameters:
+%   Targets (1):
+%    value(+State)
+%  Modes (42):
+%    tIn(+Truck, #City, +State),
+%    tIn(-Truck, #City, +State),
+%    bIn(+Box, #City, +State),
+%    bIn(-Box, #City, +State),
+%    bOn(+Box, -Truck, +State),
+%    bOn(-Box, +Truck, +State),
+%    addList(+willList, #willNumber),
+%    multiplyList(+willList, #willNumber),
+%    abs(+willNumber, &willNumber),
+%    minus(+willNumber, &willNumber),
+%    minus(+willNumber, +willNumber, &willNumber),
+%    plus(+willNumber, +willNumber, &willNumber),
+%    mult(+willNumber, +willNumber, &willNumber),
+%    div(+willNumber, +willNumber, &willNumber),
+%    allNumbers(+willList),
+%    positiveNumber(+willNumber),
+%    negativeNumber(+willNumber),
+%    in0toDot001(+willNumber),
+%    in0toDot01(+willNumber),
+%    in0toDot1(+willNumber),
+%    in0to1(+willNumber),
+%    in0to10(+willNumber),
+%    in0to100(+willNumber),
+%    in0to1000(+willNumber),
+%    equalWithTolerance(+willNumber, +willNumber, &willNumber),
+%    greaterOrEqualDifference(+willNumber, +willNumber, &willNumber),
+%    smallerOrEqualDifference(+willNumber, +willNumber, &willNumber),
+%    isaEqualTolerance(+willNumber),
+%    lessThan(+willNumber, +willNumber),
+%    greaterThan(+willNumber, +willNumber),
+%    lessThanOrEqual(+willNumber, +willNumber),
+%    greaterThanOrEqual(+willNumber, +willNumber),
+%    inBetweenOO(+willNumber, +willNumber, +willNumber),
+%    inBetweenCO(+willNumber, +willNumber, +willNumber),
+%    inBetweenOC(+willNumber, +willNumber, +willNumber),
+%    inBetweenCC(+willNumber, +willNumber, +willNumber),
+%    memberOfList(+willAnything, +willList),
+%    firstInList(+willList, &willAnything),
+%    restOfList(+willList, &willList),
+%    positionInList(+willAnything, +willList, &willNumber),
+%    nthInList(+willNumber, +willList, &willAnything),
+%    lengthOfList(+willList, &willNumber)
+
+% target           = value(D)
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.1E-7) for clause:  value(_).  [covers 9.0/9.0 pos, 0.0/0.0 neg]
+% Unacceptable due to being the root node.
+% Most-general root: value(_).  [covers 9.0/9.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'value(_).  [covers 9.0/9.0 pos, 0.0/0.0 neg]' score=-Infinity
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for tIn/3.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for bIn/3.
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.14E-6) for clause:  value(A) :- tIn(_, source, A).  [covers 8.0/9.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.14E-6) for clause:  value(A) :- tIn(_, destination, A).  [covers 8.0/9.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.14E-6) for clause:  value(A) :- bIn(_, source, A).  [covers 9.0/9.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #1, bodyLen=1] 'value(A) :- tIn(_, source, A).  [covers 8.0/9.0 pos, 0.0/0.0 neg]' score=-Infinity
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for tIn/3.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 1:  Building full index for bOn/3.
+%  At # nodes expanded = 2, |OPEN| = 2.  Pruned 0 variant children.  Sending 4 items to OPEN for evaluation and possible insertion.
+% Have created 4 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1500000000000006E-6) for clause:  value(A) :- tIn(_, source, A), tIn(_, source, A).  [covers 8.0/9.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1700000000000004E-6) for clause:  value(A) :- tIn(_, source, A), tIn(_, destination, A).  [covers 7.0/9.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2500000000000005E-6) for clause:  value(A) :- tIn(_, source, A), bIn(_, source, A).  [covers 8.0/9.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1500000000000006E-6) for clause:  value(A) :- tIn(B, source, A), bOn(_, B, A).  [covers 1.0/9.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #1, bodyLen=1] 'value(A) :- tIn(_, destination, A).  [covers 8.0/9.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 1.  Pruned 0 variant children.  Sending 4 items to OPEN for evaluation and possible insertion.
+% Have created 4 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1700000000000004E-6) for clause:  value(A) :- tIn(_, destination, A), tIn(_, source, A).  [covers 7.0/9.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1500000000000006E-6) for clause:  value(A) :- tIn(_, destination, A), tIn(_, destination, A).  [covers 8.0/9.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2700000000000003E-6) for clause:  value(A) :- tIn(_, destination, A), bIn(_, source, A).  [covers 8.0/9.0 pos, 0.0/0.0 neg]
+%     Score = -48.932192 (regressionFit = 48.932189, penalties=2.1500000000000006E-6) for clause:  value(A) :- tIn(B, destination, A), bOn(_, B, A).  [covers 6.0/9.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -48.932192): value(A) :- tIn(B, destination, A), bOn(_, B, A).  [covers 6.0/9.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#4 of outerLoop #1, bodyLen=1] 'value(A) :- bIn(_, source, A).  [covers 9.0/9.0 pos, 0.0/0.0 neg]' score=-Infinity
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for bIn/3.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for bOn/3.
+%  At # nodes expanded = 4, |OPEN| = 0.  Pruned 0 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2500000000000005E-6) for clause:  value(A) :- bIn(_, source, A), tIn(_, source, A).  [covers 8.0/9.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2700000000000003E-6) for clause:  value(A) :- bIn(_, source, A), tIn(_, destination, A).  [covers 8.0/9.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1500000000000006E-6) for clause:  value(A) :- bIn(_, source, A), bIn(_, source, A).  [covers 9.0/9.0 pos, 0.0/0.0 neg]
+
+% The best node found: value(A) :- tIn(B, destination, A), bOn(_, B, A).  [covers 6.0/9.0 pos, 0.0/0.0 neg]
+
+% The best node found: value(A) :- tIn(B, destination, A), bOn(_, B, A).  [covers 6.0/9.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: value(A) :- tIn(B, destination, A), bOn(_, B, A).  [covers 6.0/9.0 pos, 0.0/0.0 neg]
+Comparing variance: 2.2651203058849205 to score=0.0025 #egs=6.0
+Comparing variance: 11.780489189443264 to score=0.0025 #egs=3.0
+%   Creating a TRUE-branch leaf because wgtedCountTrueBranchPos = 6.0 < 2.1 * minPosCov = 6.3
+%   Creating a FALSE-branch leaf because wgtedCountFalseBranchPos = 3.0 < 2.1 * minPosCov = 6.3
+
+% Time for loop #1: 139 milliseconds.
+% Internal node max length = 2
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 5
+% Max number of clauses    = 8
+
+% On cycle #1, the best clause found is:
+%      value(A) :- tIn(B, destination, A), bOn(_, B, A).  [covers 6.0/9.0 pos, 0.0/0.0 neg]
+% This clause covers 6 positive examples, of which 6 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #1 @ 3:53:10 8/30/17.  [Using 3,332,600 memory cells.]  %%%%%
+
+
+% FOR value(A):
+%   if ( tIn(B, destination, A), bOn(C, B, A) )
+%   then return 55.461022776549804;  // std dev = 3.687, 6.000 (wgt'ed) examples reached here.  /* #pos=6 */
+%   else return 41.97412533090704;  // std dev = 5.945, 3.000 (wgt'ed) examples reached here.  /* #pos=3 */
+
+
+% Clauses:
+
+value(A, 55.461022776549804) :- 
+     tIn(B, destination, A), 
+     bOn(C, B, A), 
+     !. // Clause #1.
+
+value(A, 41.97412533090704) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_value(a, 55.461022776549804) :-  /* #pos=6 */ 
+   tIn(uniqueVar1, destination, a),
+   bOn(underscore, uniqueVar1, a),
+   !. // Flattened version of clause #1.
+
+flattened_value(underscore, 41.97412533090704) :-  /* #pos=3 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   tIn(uniqueVar1, destination, a)
+%   bOn(underscore, uniqueVar1, a)
+
+% Saving model in: train/models/bRDNs/value.model.ckpt
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  Final call for computing score for value.  %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+stepLength_tree1(1.0).
+
+logPrior(0.0).
+value(D, Total) :- // A general accessor. 
+   value(D, 1000000, Total), !.
+value(D, Total) :- waitHere("This should not fail", value(D, Total)).
+
+value(D, TreesToUse, Total) :- // A tree-limited accessor (e.g., for tuning the number of trees to use).
+   logPrior(LogPrior),
+   getScore_value_tree1(D, TreesToUse, Total1),
+   Total is LogPrior + Total1,
+   !.
+value(D, TreesToUse, Total) :- waitHere("This should not fail", value(D, TreesToUse, Total)).
+
+getScore_value_tree1(D, TreesToUse, 0.0) :- 1 > TreesToUse, !.
+getScore_value_tree1(D, TreesToUse, Total1) :- value_tree1(D, Total), stepLength_tree1(StepLen), Total1 is Total * StepLen.
+
+flattenedLiteralsInThisSetOfTrees(value, 2, [
+   tIn(uniqueVar1, destination, a),
+   bOn(underscore, uniqueVar1, a)]).
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:45.85833275802361
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 9 positive seeds: 0 1 2 3 4 5 6 7 8
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = value(D)
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.1E-7) for clause:  value(_).  [covers 9.0/9.0 pos, 0.0/0.0 neg]
+% Unacceptable due to being the root node.
+% Most-general root: value(_).  [covers 9.0/9.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'value(_).  [covers 9.0/9.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.14E-6) for clause:  value(A) :- tIn(_, source, A).  [covers 8.0/9.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.14E-6) for clause:  value(A) :- tIn(_, destination, A).  [covers 8.0/9.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.14E-6) for clause:  value(A) :- bIn(_, source, A).  [covers 9.0/9.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #1, bodyLen=1] 'value(A) :- tIn(_, source, A).  [covers 8.0/9.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 2.  Pruned 0 variant children.  Sending 4 items to OPEN for evaluation and possible insertion.
+% Have created 4 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1500000000000006E-6) for clause:  value(A) :- tIn(_, source, A), tIn(_, source, A).  [covers 8.0/9.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1700000000000004E-6) for clause:  value(A) :- tIn(_, source, A), tIn(_, destination, A).  [covers 7.0/9.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2500000000000005E-6) for clause:  value(A) :- tIn(_, source, A), bIn(_, source, A).  [covers 8.0/9.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1500000000000006E-6) for clause:  value(A) :- tIn(B, source, A), bOn(_, B, A).  [covers 1.0/9.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #1, bodyLen=1] 'value(A) :- tIn(_, destination, A).  [covers 8.0/9.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 1.  Pruned 0 variant children.  Sending 4 items to OPEN for evaluation and possible insertion.
+% Have created 4 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1700000000000004E-6) for clause:  value(A) :- tIn(_, destination, A), tIn(_, source, A).  [covers 7.0/9.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1500000000000006E-6) for clause:  value(A) :- tIn(_, destination, A), tIn(_, destination, A).  [covers 8.0/9.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2700000000000003E-6) for clause:  value(A) :- tIn(_, destination, A), bIn(_, source, A).  [covers 8.0/9.0 pos, 0.0/0.0 neg]
+%     Score = -48.932192 (regressionFit = 48.932189, penalties=2.1500000000000006E-6) for clause:  value(A) :- tIn(B, destination, A), bOn(_, B, A).  [covers 6.0/9.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -48.932192): value(A) :- tIn(B, destination, A), bOn(_, B, A).  [covers 6.0/9.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#4 of outerLoop #1, bodyLen=1] 'value(A) :- bIn(_, source, A).  [covers 9.0/9.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 4, |OPEN| = 0.  Pruned 0 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2500000000000005E-6) for clause:  value(A) :- bIn(_, source, A), tIn(_, source, A).  [covers 8.0/9.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2700000000000003E-6) for clause:  value(A) :- bIn(_, source, A), tIn(_, destination, A).  [covers 8.0/9.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.1500000000000006E-6) for clause:  value(A) :- bIn(_, source, A), bIn(_, source, A).  [covers 9.0/9.0 pos, 0.0/0.0 neg]
+
+% The best node found: value(A) :- tIn(B, destination, A), bOn(_, B, A).  [covers 6.0/9.0 pos, 0.0/0.0 neg]
+
+% The best node found: value(A) :- tIn(B, destination, A), bOn(_, B, A).  [covers 6.0/9.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: value(A) :- tIn(B, destination, A), bOn(_, B, A).  [covers 6.0/9.0 pos, 0.0/0.0 neg]
+Comparing variance: 2.2651203058849205 to score=0.0025 #egs=6.0
+Comparing variance: 11.780489189443264 to score=0.0025 #egs=3.0
+%   Creating a TRUE-branch leaf because wgtedCountTrueBranchPos = 6.0 < 2.1 * minPosCov = 6.3
+%   Creating a FALSE-branch leaf because wgtedCountFalseBranchPos = 3.0 < 2.1 * minPosCov = 6.3
+
+% Time for loop #1: 59 milliseconds.
+% Internal node max length = 2
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 5
+% Max number of clauses    = 8
+
+% On cycle #1, the best clause found is:
+%      value(A) :- tIn(B, destination, A), bOn(_, B, A).  [covers 6.0/9.0 pos, 0.0/0.0 neg]
+% This clause covers 6 positive examples, of which 6 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree Combined @ 3:53:11 8/30/17.  [Using 1,502,840 memory cells.]  %%%%%
+
+
+% FOR value(A):
+%   if ( tIn(B, destination, A), bOn(C, B, A) )
+%   then return 55.461022776549804;  // std dev = 3.687, 6.000 (wgt'ed) examples reached here.  /* #pos=6 */
+%   else return 41.97412533090704;  // std dev = 5.945, 3.000 (wgt'ed) examples reached here.  /* #pos=3 */
+
+
+% Clauses:
+
+value(A, 55.461022776549804) :- 
+     tIn(B, destination, A), 
+     bOn(C, B, A), 
+     !. // Clause #1.
+
+value(A, 41.97412533090704) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_value(a, 55.461022776549804) :-  /* #pos=6 */ 
+   tIn(uniqueVar2, destination, a),
+   bOn(underscore, uniqueVar2, a),
+   !. // Flattened version of clause #1.
+
+flattened_value(underscore, 41.97412533090704) :-  /* #pos=3 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   tIn(uniqueVar2, destination, a)
+%   bOn(underscore, uniqueVar2, a)
+
+% Time taken to learn model for 'value': 318 milliseconds.
+% Saving model in: train/models/bRDNs/value.model
+cached groundings hit: 0
+Misses: 0
+
+% Total learning time (1 trees): 554 milliseconds.

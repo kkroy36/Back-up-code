@@ -1,0 +1,61 @@
+////// Learned from a dataset containing 9 positive (9.0 weighted sum) and 0 negative (0.0 wgt'ed) examples.
+////// The minimal (wgt'ed) coverage = 3.000, the maximal (wgt'ed) NEG coverage = 0.499, and the minimal (wgt'ed) precision = 0.001 (using m = 0.1)
+
+usePrologVariables: true.
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: allPossibleMarkers
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #13, (0.65, 0.7], from 'outerLoop #1, null' and covering 6.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.659, precision = 0.984, and F1 = 0.789 - learned after 12 total and 9 acceptable nodes.  Node score = -48.93219155363931
+
+ FOR value(D) IF (tIn(Anon1087, destination, D), bOn(Anon1199, Anon1087, D)) THEN output = 55.461023 ELSE output = 41.974125;
+
+// Best in (weighted) recall bin #15, (0.75, 0.8], from 'outerLoop #1, null' and covering 7.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.769, precision = 0.986, and F1 = 0.864 - learned after 6 total and 4 acceptable nodes.  Node score = -Infinity
+
+ FOR value(D) IF (tIn(Anon1087, source, D), tIn(Anon1127, destination, D)) THEN output = 51.742828 ELSE output = 48.244359;
+
+// Best in (weighted) recall bin #17, (0.85, 0.9], from 'outerLoop #1, null' and covering 8.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.879, precision = 0.988, and F1 = 0.930 - learned after 2 total and 0 acceptable nodes.  Node score = -Infinity
+
+ FOR value(D) IF (tIn(Anon1087, source, D)) THEN output = 50.824105 ELSE output = 52.095670;
+      /* FALSE NEG: value(s4) Actual Bool=true Prob=0.0 Output=52.09566967034782 */
+
+// Best in (weighted) recall bin #19, (0.95, 1.01], from 'outerLoop #1, null' and covering 9.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.989, precision = 0.989, and F1 = 0.989 - learned after 4 total and 2 acceptable nodes.  Node score = -Infinity
+
+ FOR value(D) IF (bIn(Anon1091, source, D)) THEN output = 50.965390 ELSE output = 0.000000;
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #1, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #13, (0.65, 0.7], from 'outerLoop #1, null' and covering 6.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.659, precision = 0.984, and F1 = 0.789 - learned after 12 total and 9 acceptable nodes.  Node score = -48.93219155363931
+
+ FOR value(D) IF (tIn(Anon1087, destination, D), bOn(Anon1199, Anon1087, D)) THEN output = 55.461023 ELSE output = 41.974125;
+
+// Best in (weighted) recall bin #15, (0.75, 0.8], from 'outerLoop #1, null' and covering 7.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.769, precision = 0.986, and F1 = 0.864 - learned after 6 total and 4 acceptable nodes.  Node score = -Infinity
+
+ FOR value(D) IF (tIn(Anon1087, source, D), tIn(Anon1127, destination, D)) THEN output = 51.742828 ELSE output = 48.244359;
+
+// Best in (weighted) recall bin #17, (0.85, 0.9], from 'outerLoop #1, null' and covering 8.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.879, precision = 0.988, and F1 = 0.930 - learned after 2 total and 0 acceptable nodes.  Node score = -Infinity
+
+ FOR value(D) IF (tIn(Anon1087, source, D)) THEN output = 50.824105 ELSE output = 52.095670;
+      /* FALSE NEG: value(s4) Actual Bool=true Prob=0.0 Output=52.09566967034782 */
+
+// Best in (weighted) recall bin #19, (0.95, 1.01], from 'outerLoop #1, null' and covering 9.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.989, precision = 0.989, and F1 = 0.989 - learned after 4 total and 2 acceptable nodes.  Node score = -Infinity
+
+ FOR value(D) IF (bIn(Anon1091, source, D)) THEN output = 50.965390 ELSE output = 0.000000;
+

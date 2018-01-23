@@ -1,0 +1,299 @@
+////// Learned from a dataset containing 93 positive (93.0 weighted sum) and 0 negative (0.0 wgt'ed) examples.
+////// The minimal (wgt'ed) coverage = 3.000, the maximal (wgt'ed) NEG coverage = 0.499, and the minimal (wgt'ed) precision = 0.001 (using m = 0.1)
+
+usePrologVariables: true.
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: allPossibleMarkers
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #4, (0.2, 0.25], from 'outerLoop #6, null' and covering 3.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.248, precision = 0.968, and F1 = 0.395 - learned after 11 total and 9 acceptable nodes.  Node score = -0.0644013788175132
+
+ FOR value(D) IF (tIn(Anon52017, destination, D), bOn(Anon52127, Anon52017, D)) THEN output = 0.045945 ELSE output = 0.025525;
+
+// Best in (weighted) recall bin #5, (0.25, 0.3], from 'outerLoop #6, null' and covering 3.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.297, precision = 0.968, and F1 = 0.455 - learned after 5 total and 4 acceptable nodes.  Node score = -2.1500000000000006E-6
+
+ FOR value(D) IF (tIn(Anon12113, destination, D), bOn(Anon15097, Anon12113, D)) THEN output = 0.000000 ELSE output = -1.261379;
+
+// Best in (weighted) recall bin #11, (0.55, 0.6], from 'outerLoop #6, null' and covering 7.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.579, precision = 0.986, and F1 = 0.729 - learned after 6 total and 4 acceptable nodes.  Node score = -0.02279989907775035
+
+ FOR value(D) IF (tIn(Anon52017, source, D), tIn(Anon52061, destination, D)) THEN output = -0.019691 ELSE output = 0.101078;
+
+// Best in (weighted) recall bin #13, (0.65, 0.7], from 'outerLoop #6, null' and covering 7.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.693, precision = 0.986, and F1 = 0.814 - learned after 2 total and 1 acceptable nodes.  Node score = -2.1700000000000004E-6
+
+ FOR value(D) IF (tIn(Anon12113, destination, D), tIn(Anon15089, source, D)) THEN output = -1.261379 ELSE output = 0.000000;
+
+// Best in (weighted) recall bin #14, (0.7, 0.75], from 'outerLoop #6, null' and covering 9.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.744, precision = 0.989, and F1 = 0.849 - learned after 2 total and 0 acceptable nodes.  Node score = -0.06440036881751317
+
+ FOR value(D) IF (tIn(Anon52017, source, D)) THEN output = 0.025525 ELSE output = 0.045945;
+
+// Best in (weighted) recall bin #15, (0.75, 0.8], from 'outerLoop #1, null' and covering 81.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.786, precision = 0.999, and F1 = 0.879 - learned after 8 total and 6 acceptable nodes.  Node score = -46114.312631697365
+
+ FOR value(D) IF (tIn(Anon56267, destination, D), bOn(Anon56323, Anon56267, D)) THEN output = 2.10531e-15 ELSE output = -1.53413e-15;
+
+// Best in (weighted) recall bin #16, (0.8, 0.85], from 'outerLoop #2, null' and covering 78.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.838, precision = 0.999, and F1 = 0.911 - learned after 7 total and 6 acceptable nodes.  Node score = -42599.84081657405
+
+ FOR value(D) IF (tIn(Anon56267, destination, D), bOn(Anon56537, Anon56267, D), tIn(Anon56607, source, D)) THEN output = 2.18629e-15 ELSE output = -0.008576;
+      /* FALSE NEG: value(s2) Actual Bool=true Prob=15.699989746968797 Output=-0.018377816368795763 */
+      /* FALSE NEG: value(s5) Actual Bool=true Prob=15.699989746968797 Output=-0.018377816368795763 */
+      /* FALSE NEG: value(s7) Actual Bool=true Prob=15.699989746968797 Output=-0.018377816368795763 */
+      /* FALSE NEG: value(s3) Actual Bool=true Prob=15.699989746968797 Output=-0.018377816368795763 */
+      /* FALSE NEG: value(s6) Actual Bool=true Prob=15.699989746968797 Output=-0.018377816368795763 */
+
+// Best in (weighted) recall bin #17, (0.85, 0.9], from 'outerLoop #2, null' and covering 83.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.892, precision = 0.999, and F1 = 0.942 - learned after 14 total and 13 acceptable nodes.  Node score = -42599.8402649253
+
+ FOR value(D) IF (tIn(Anon56267, destination, D), tIn(Anon56529, source, D), bOn(Anon56701, Anon56529, D)) THEN output = 2.05458e-15 ELSE output = -0.012864;
+      /* FALSE NEG: value(s2) Actual Bool=true Prob=15.699989746968797 Output=-0.018377816368795763 */
+      /* FALSE NEG: value(s5) Actual Bool=true Prob=15.699989746968797 Output=-0.018377816368795763 */
+      /* FALSE NEG: value(s7) Actual Bool=true Prob=15.699989746968797 Output=-0.018377816368795763 */
+      /* FALSE NEG: value(s3) Actual Bool=true Prob=15.699989746968797 Output=-0.018377816368795763 */
+      /* FALSE NEG: value(s6) Actual Bool=true Prob=15.699989746968797 Output=-0.018377816368795763 */
+
+// Best in (weighted) recall bin #18, (0.9, 0.95], from 'outerLoop #3, null' and covering 78.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.939, precision = 0.999, and F1 = 0.968 - learned after 5 total and 4 acceptable nodes.  Node score = -42599.8395565726
+
+ FOR value(D) IF (tIn(Anon1087, destination, D), tIn(Anon1349, source, D), bOn(Anon1429, Anon1349, D), bOn(Anon1879, Anon1087, D)) THEN output = 21.199543 ELSE output = 21.459717;
+      /* FALSE NEG: value(s11) Actual Bool=true Prob=0.0 Output=-4.485233873800013 */
+      /* FALSE NEG: value(s15) Actual Bool=true Prob=0.0 Output=-4.485233873800013 */
+      /* FALSE NEG: value(s10) Actual Bool=true Prob=0.0 Output=125.23952007500004 */
+      /* FALSE NEG: value(s12) Actual Bool=true Prob=0.0 Output=-4.485233873800013 */
+      /* FALSE NEG: value(s13) Actual Bool=true Prob=0.0 Output=-4.485233873800013 */
+
+// Best in (weighted) recall bin #19, (0.95, 1.01], from 'outerLoop #4, null' and covering 78.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.999, precision = 0.999, and F1 = 0.999 - learned after 1 total and 0 acceptable nodes.  Node score = -42599.8395565726
+
+ FOR value(D) IF (tIn(Anon1087, destination, D), tIn(Anon1349, source, D), bOn(Anon1429, Anon1349, D), bOn(Anon1879, Anon1087, D)) THEN output = 21.199543 ELSE output = 21.459717;
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #1, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #15, (0.75, 0.8], from 'outerLoop #1, null' and covering 81.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.786, precision = 0.999, and F1 = 0.879 - learned after 8 total and 6 acceptable nodes.  Node score = -46114.312631697365
+
+ FOR value(D) IF (tIn(Anon56267, destination, D), bOn(Anon56323, Anon56267, D)) THEN output = 2.10531e-15 ELSE output = -1.53413e-15;
+
+// Best in (weighted) recall bin #17, (0.85, 0.9], from 'outerLoop #1, null' and covering 90.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.873, precision = 0.999, and F1 = 0.932 - learned after 5 total and 3 acceptable nodes.  Node score = -46114.31117479886
+
+ FOR value(D) IF (tIn(Anon56267, destination, D), tIn(Anon56315, source, D)) THEN output = -0.001429 ELSE output = 0.009896;
+      /* FALSE NEG: value(s26) Actual Bool=true Prob=43.549027382526255 Output=-41.71906900191625 */
+      /* FALSE NEG: value(s4) Actual Bool=true Prob=55.310132501009214 Output=0.06432235729078428 */
+      /* FALSE NEG: value(s1) Actual Bool=true Prob=55.310132501009214 Output=0.06432235729078428 */
+      /* FALSE NEG: value(s61) Actual Bool=true Prob=11.0279762086 Output=0.0 */
+      /* FALSE NEG: value(s60) Actual Bool=true Prob=11.0279762086 Output=0.0 */
+
+// Best in (weighted) recall bin #18, (0.9, 0.95], from 'outerLoop #1, null' and covering 93.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.902, precision = 0.999, and F1 = 0.948 - learned after 3 total and 1 acceptable nodes.  Node score = -46114.31079778989
+
+ FOR value(D) IF (tIn(Anon56267, destination, D)) THEN output = -0.001383 ELSE output = 0.012864;
+      /* FALSE NEG: value(s26) Actual Bool=true Prob=43.549027382526255 Output=-41.71906900191625 */
+      /* FALSE NEG: value(s83) Actual Bool=true Prob=43.549027382526255 Output=-9.492864753726252 */
+      /* FALSE NEG: value(s4) Actual Bool=true Prob=55.310132501009214 Output=0.06432235729078428 */
+      /* FALSE NEG: value(s1) Actual Bool=true Prob=55.310132501009214 Output=0.06432235729078428 */
+      /* FALSE NEG: value(s84) Actual Bool=true Prob=43.549027382526255 Output=-5.780565935826253 */
+
+// Best in (weighted) recall bin #19, (0.95, 1.01], from 'outerLoop #1, null' and covering 100.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.970, precision = 0.999, and F1 = 0.984 - learned after 2 total and 0 acceptable nodes.  Node score = -46114.312630687375
+
+ FOR value(D) IF (tIn(Anon56267, source, D)) THEN output = -1.70530e-15 ELSE output = 0.000000;
+      /* FALSE NEG: value(s61) Actual Bool=true Prob=11.0279762086 Output=0.0 */
+      /* FALSE NEG: value(s62) Actual Bool=true Prob=11.0279762086 Output=0.0 */
+      /* FALSE NEG: value(s60) Actual Bool=true Prob=11.0279762086 Output=0.0 */
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #2, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #15, (0.75, 0.8], from 'outerLoop #2, null' and covering 78.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.779, precision = 0.999, and F1 = 0.875 - learned after 14 total and 13 acceptable nodes.  Node score = -46114.31442891208
+
+ FOR value(D) IF (tIn(Anon52381, source, D), tIn(Anon52639, destination, D), bOn(Anon52811, Anon52639, D)) THEN output = -5.10133e-15 ELSE output = 0.007518;
+
+// Best in (weighted) recall bin #16, (0.8, 0.85], from 'outerLoop #2, null' and covering 78.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.838, precision = 0.999, and F1 = 0.911 - learned after 7 total and 6 acceptable nodes.  Node score = -42599.84081657405
+
+ FOR value(D) IF (tIn(Anon56267, destination, D), bOn(Anon56537, Anon56267, D), tIn(Anon56607, source, D)) THEN output = 2.18629e-15 ELSE output = -0.008576;
+      /* FALSE NEG: value(s2) Actual Bool=true Prob=15.699989746968797 Output=-0.018377816368795763 */
+      /* FALSE NEG: value(s5) Actual Bool=true Prob=15.699989746968797 Output=-0.018377816368795763 */
+      /* FALSE NEG: value(s7) Actual Bool=true Prob=15.699989746968797 Output=-0.018377816368795763 */
+      /* FALSE NEG: value(s3) Actual Bool=true Prob=15.699989746968797 Output=-0.018377816368795763 */
+      /* FALSE NEG: value(s6) Actual Bool=true Prob=15.699989746968797 Output=-0.018377816368795763 */
+
+// Best in (weighted) recall bin #17, (0.85, 0.9], from 'outerLoop #2, null' and covering 83.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.892, precision = 0.999, and F1 = 0.942 - learned after 14 total and 13 acceptable nodes.  Node score = -42599.8402649253
+
+ FOR value(D) IF (tIn(Anon56267, destination, D), tIn(Anon56529, source, D), bOn(Anon56701, Anon56529, D)) THEN output = 2.05458e-15 ELSE output = -0.012864;
+      /* FALSE NEG: value(s2) Actual Bool=true Prob=15.699989746968797 Output=-0.018377816368795763 */
+      /* FALSE NEG: value(s5) Actual Bool=true Prob=15.699989746968797 Output=-0.018377816368795763 */
+      /* FALSE NEG: value(s7) Actual Bool=true Prob=15.699989746968797 Output=-0.018377816368795763 */
+      /* FALSE NEG: value(s3) Actual Bool=true Prob=15.699989746968797 Output=-0.018377816368795763 */
+      /* FALSE NEG: value(s6) Actual Bool=true Prob=15.699989746968797 Output=-0.018377816368795763 */
+
+// Best in (weighted) recall bin #18, (0.9, 0.95], from 'outerLoop #2, null' and covering 83.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.911, precision = 0.999, and F1 = 0.953 - learned after 3 total and 2 acceptable nodes.  Node score = -46114.30199378713
+
+ FOR value(D) IF (tIn(Anon4573, source, D), bOn(Anon4625, Anon4573, D), tIn(Anon4855, destination, D)) THEN output = 2.05458e-15 ELSE output = -2.365085;
+      /* FALSE NEG: value(s26) Actual Bool=true Prob=45.914112877681006 Output=-44.084154497071005 */
+      /* FALSE NEG: value(s83) Actual Bool=true Prob=45.914112877681006 Output=-11.857950248881004 */
+      /* FALSE NEG: value(s85) Actual Bool=true Prob=45.914112877681006 Output=-8.145651430981005 */
+      /* FALSE NEG: value(s86) Actual Bool=true Prob=45.914112877681006 Output=-8.145651430981005 */
+      /* FALSE NEG: value(s84) Actual Bool=true Prob=45.914112877681006 Output=-8.145651430981005 */
+
+// Best in (weighted) recall bin #19, (0.95, 1.01], from 'outerLoop #2, null' and covering 90.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.967, precision = 0.999, and F1 = 0.983 - learned after 3 total and 2 acceptable nodes.  Node score = -42599.84173497863
+
+ FOR value(D) IF (tIn(Anon56267, destination, D), tIn(Anon56529, source, D)) THEN output = -0.001429 ELSE output = 0.000000;
+      /* FALSE NEG: value(s61) Actual Bool=true Prob=11.0279762086 Output=0.0 */
+      /* FALSE NEG: value(s62) Actual Bool=true Prob=11.0279762086 Output=0.0 */
+      /* FALSE NEG: value(s60) Actual Bool=true Prob=11.0279762086 Output=0.0 */
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #3, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #17, (0.85, 0.9], from 'outerLoop #3, null' and covering 78.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.856, precision = 0.999, and F1 = 0.922 - learned after 10 total and 9 acceptable nodes.  Node score = -46114.301994697125
+
+ FOR value(D) IF (tIn(Anon7961, source, D), bOn(Anon8227, Anon7961, D), tIn(Anon8701, destination, D), bOn(Anon8809, Anon8701, D)) THEN output = -5.10133e-15 ELSE output = -1.36643e-15;
+      /* FALSE NEG: value(s11) Actual Bool=true Prob=21.45971691596 Output=-1.621559424360001 */
+      /* FALSE NEG: value(s15) Actual Bool=true Prob=21.45971691596 Output=-1.621559424360001 */
+      /* FALSE NEG: value(s10) Actual Bool=true Prob=21.45971691596 Output=6.48623769744 */
+      /* FALSE NEG: value(s12) Actual Bool=true Prob=21.45971691596 Output=-1.621559424360001 */
+      /* FALSE NEG: value(s13) Actual Bool=true Prob=21.45971691596 Output=-1.621559424360001 */
+
+// Best in (weighted) recall bin #18, (0.9, 0.95], from 'outerLoop #3, null' and covering 78.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.939, precision = 0.999, and F1 = 0.968 - learned after 5 total and 4 acceptable nodes.  Node score = -42599.8395565726
+
+ FOR value(D) IF (tIn(Anon1087, destination, D), tIn(Anon1349, source, D), bOn(Anon1429, Anon1349, D), bOn(Anon1879, Anon1087, D)) THEN output = 21.199543 ELSE output = 21.459717;
+      /* FALSE NEG: value(s11) Actual Bool=true Prob=0.0 Output=-4.485233873800013 */
+      /* FALSE NEG: value(s15) Actual Bool=true Prob=0.0 Output=-4.485233873800013 */
+      /* FALSE NEG: value(s10) Actual Bool=true Prob=0.0 Output=125.23952007500004 */
+      /* FALSE NEG: value(s12) Actual Bool=true Prob=0.0 Output=-4.485233873800013 */
+      /* FALSE NEG: value(s13) Actual Bool=true Prob=0.0 Output=-4.485233873800013 */
+
+// Best in (weighted) recall bin #19, (0.95, 1.01], from 'outerLoop #3, null' and covering 83.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.999, precision = 0.999, and F1 = 0.999 - learned after 1 total and 0 acceptable nodes.  Node score = -42599.8486023805
+
+ FOR value(D) IF (tIn(Anon45659, destination, D), tIn(Anon45917, source, D), bOn(Anon46073, Anon45917, D)) THEN output = -4.79402e-15 ELSE output = -0.045945;
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #4, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #18, (0.9, 0.95], from 'outerLoop #4, null' and covering 78.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.939, precision = 0.999, and F1 = 0.968 - learned after 6 total and 5 acceptable nodes.  Node score = -42599.8395565726
+
+ FOR value(D) IF (tIn(Anon7961, source, D), bOn(Anon8227, Anon7961, D), tIn(Anon8701, destination, D), bOn(Anon9335, Anon8701, D)) THEN output = -5.10133e-15 ELSE output = -7.10543e-16;
+      /* FALSE NEG: value(s11) Actual Bool=true Prob=21.45971691596 Output=-1.621559424360001 */
+      /* FALSE NEG: value(s15) Actual Bool=true Prob=21.45971691596 Output=-1.621559424360001 */
+      /* FALSE NEG: value(s10) Actual Bool=true Prob=21.45971691596 Output=6.48623769744 */
+      /* FALSE NEG: value(s12) Actual Bool=true Prob=21.45971691596 Output=-1.621559424360001 */
+      /* FALSE NEG: value(s13) Actual Bool=true Prob=21.45971691596 Output=-1.621559424360001 */
+
+// Best in (weighted) recall bin #19, (0.95, 1.01], from 'outerLoop #4, null' and covering 78.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.999, precision = 0.999, and F1 = 0.999 - learned after 1 total and 0 acceptable nodes.  Node score = -42599.8395565726
+
+ FOR value(D) IF (tIn(Anon1087, destination, D), tIn(Anon1349, source, D), bOn(Anon1429, Anon1349, D), bOn(Anon1879, Anon1087, D)) THEN output = 21.199543 ELSE output = 21.459717;
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #5, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #15, (0.75, 0.8], from 'outerLoop #5, null' and covering 8.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.792, precision = 0.988, and F1 = 0.879 - learned after 6 total and 4 acceptable nodes.  Node score = -Infinity
+
+ FOR value(D) IF (tIn(Anon3919, source, D), bOn(Anon3959, Anon3919, D)) THEN output = 43.549027 ELSE output = 55.374455;
+
+// Best in (weighted) recall bin #19, (0.95, 1.01], from 'outerLoop #5, null' and covering 78.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.999, precision = 0.999, and F1 = 0.999 - learned after 1 total and 0 acceptable nodes.  Node score = -42599.8395565726
+
+ FOR value(D) IF (tIn(Anon7961, source, D), bOn(Anon8227, Anon7961, D), tIn(Anon8701, destination, D), bOn(Anon9335, Anon8701, D)) THEN output = -5.10133e-15 ELSE output = -7.10543e-16;
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #6, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #4, (0.2, 0.25], from 'outerLoop #6, null' and covering 3.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.248, precision = 0.968, and F1 = 0.395 - learned after 11 total and 9 acceptable nodes.  Node score = -0.0644013788175132
+
+ FOR value(D) IF (tIn(Anon52017, destination, D), bOn(Anon52127, Anon52017, D)) THEN output = 0.045945 ELSE output = 0.025525;
+
+// Best in (weighted) recall bin #5, (0.25, 0.3], from 'outerLoop #6, null' and covering 3.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.297, precision = 0.968, and F1 = 0.455 - learned after 5 total and 4 acceptable nodes.  Node score = -2.1500000000000006E-6
+
+ FOR value(D) IF (tIn(Anon12113, destination, D), bOn(Anon15097, Anon12113, D)) THEN output = 0.000000 ELSE output = -1.261379;
+
+// Best in (weighted) recall bin #11, (0.55, 0.6], from 'outerLoop #6, null' and covering 7.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.579, precision = 0.986, and F1 = 0.729 - learned after 6 total and 4 acceptable nodes.  Node score = -0.02279989907775035
+
+ FOR value(D) IF (tIn(Anon52017, source, D), tIn(Anon52061, destination, D)) THEN output = -0.019691 ELSE output = 0.101078;
+
+// Best in (weighted) recall bin #13, (0.65, 0.7], from 'outerLoop #6, null' and covering 7.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.693, precision = 0.986, and F1 = 0.814 - learned after 2 total and 1 acceptable nodes.  Node score = -2.1700000000000004E-6
+
+ FOR value(D) IF (tIn(Anon12113, destination, D), tIn(Anon15089, source, D)) THEN output = -1.261379 ELSE output = 0.000000;
+
+// Best in (weighted) recall bin #14, (0.7, 0.75], from 'outerLoop #6, null' and covering 9.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.744, precision = 0.989, and F1 = 0.849 - learned after 2 total and 0 acceptable nodes.  Node score = -0.06440036881751317
+
+ FOR value(D) IF (tIn(Anon52017, source, D)) THEN output = 0.025525 ELSE output = 0.045945;
+
+// Best in (weighted) recall bin #16, (0.8, 0.85], from 'outerLoop #6, null' and covering 10.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.826, precision = 0.990, and F1 = 0.901 - learned after 3 total and 1 acceptable nodes.  Node score = -Infinity
+
+ FOR value(D) IF (tIn(Anon7597, destination, D)) THEN output = 0.000000 ELSE output = 9.460342;
+      /* FALSE NEG: value(s1) Actual Bool=true Prob=45.914112877681006 Output=9.460341980618992 */
+      /* FALSE NEG: value(s4) Actual Bool=true Prob=45.914112877681006 Output=9.460341980618992 */
+
+// Best in (weighted) recall bin #19, (0.95, 1.01], from 'outerLoop #6, null' and covering 8.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.988, precision = 0.988, and F1 = 0.988 - learned after 1 total and 0 acceptable nodes.  Node score = -46114.31263169738
+
+ FOR value(D) IF (tIn(Anon52381, source, D), bOn(Anon52647, Anon52381, D)) THEN output = -5.62188e-15 ELSE output = 0.018378;
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #7, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #15, (0.75, 0.8], from 'outerLoop #7, null' and covering 7.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.769, precision = 0.986, and F1 = 0.864 - learned after 3 total and 2 acceptable nodes.  Node score = -Infinity
+
+ FOR value(D) IF (tIn(Anon7961, source, D), tIn(Anon11757, destination, D)) THEN output = 0.000000 ELSE output = 5.676205;
+
+// Best in (weighted) recall bin #19, (0.95, 1.01], from 'outerLoop #7, null' and covering 9.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.989, precision = 0.989, and F1 = 0.989 - learned after 1 total and 0 acceptable nodes.  Node score = -46114.47297471522
+
+ FOR value(D) IF (tIn(Anon41487, source, D)) THEN output = 0.005907 ELSE output = -0.196905;
+

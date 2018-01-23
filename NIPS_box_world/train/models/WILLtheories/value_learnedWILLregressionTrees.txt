@@ -1,0 +1,1222 @@
+usePrologVariables: true.
+
+% maxTreeDepthInNodes                 = 5
+% maxTreeDepthInLiterals              = 12
+% maxNumberOfLiteralsAtAnInteriorNode = 2
+% maxFreeBridgersInBody               = 1
+% maxNumberOfClauses                  = 8
+% maxNodesToConsider                  = 10
+% maxNodesToCreate                    = 10,000
+% maxAcceptableNodeScoreToStop        = 0.003
+% negPosRatio                         = 2.000
+% testNegPosRatio                     = -1.000
+% # of pos examples                   = 103
+% # of neg examples                   = 0
+
+
+
+%%%%%  WILL-Produced Tree #1 @ 18:59:36 9/6/17.  [Using 1,871,176 memory cells.]  %%%%%
+
+% FOR value(A):
+%   if ( tIn(B, destination, A) )
+%   then if ( tIn(C, source, A), bOn(D, C, A) )
+%   | then if ( bOn(E, B, A) )
+%   | | then return 21.19954311861551;  // std dev = 23.355, 78.000 (wgt'ed) examples reached here.  /* #pos=78 */
+%   | | else return 21.45971691596;  // std dev = 7.252, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+%   | else if ( bOn(F, B, A) )
+%   | | then return 11.0279762086;  // std dev = 3.37e-07, 3.000 (wgt'ed) examples reached here.  /* #pos=3 */
+%   | | else return 15.6816119306;  // std dev = 4.77e-07, 7.000 (wgt'ed) examples reached here.  /* #pos=7 */
+%   else return 45.914112877681006;  // std dev = 19.334, 10.000 (wgt'ed) examples reached here.  /* #pos=10 */
+
+
+% Clauses:
+
+value(A, 21.19954311861551) :- 
+     tIn(B, destination, A), 
+     tIn(C, source, A), 
+     bOn(D, C, A), 
+     bOn(E, B, A), 
+     !. // Clause #1.
+
+value(A, 21.45971691596) :- 
+     tIn(B, destination, A), 
+     tIn(C, source, A), 
+     bOn(D, C, A), 
+     !. // Clause #2.
+
+value(A, 11.0279762086) :- 
+     tIn(B, destination, A), 
+     bOn(C, B, A), 
+     !. // Clause #3.
+
+value(A, 15.6816119306) :- 
+     tIn(B, destination, A), 
+     !. // Clause #4.
+
+value(A, 45.914112877681006) :- !. // Clause #5.
+
+
+% The flattened versions of these clauses:
+
+flattened_value(a, 21.19954311861551) :-  /* #pos=78 */ 
+   tIn(uniqueVar1, destination, a),
+   tIn(uniqueVar2, source, a),
+   bOn(underscore, uniqueVar2, a),
+   bOn(underscore, uniqueVar1, a),
+   !. // Flattened version of clause #1.
+
+flattened_value(a, 21.45971691596) :-  /* #pos=5 */ 
+   tIn(underscore, destination, a),
+   tIn(uniqueVar3, source, a),
+   bOn(underscore, uniqueVar3, a),
+   !. // Flattened version of clause #2.
+
+flattened_value(a, 11.0279762086) :-  /* #pos=3 */ 
+   tIn(uniqueVar4, destination, a),
+   bOn(underscore, uniqueVar4, a),
+   !. // Flattened version of clause #3.
+
+flattened_value(a, 15.6816119306) :-  /* #pos=7 */ 
+   tIn(underscore, destination, a),
+   !. // Flattened version of clause #4.
+
+flattened_value(underscore, 45.914112877681006) :-  /* #pos=10 */ 
+   !. // Flattened version of clause #5.
+
+
+% The unique flattened literals:
+%   tIn(uniqueVar2, source, a)
+%   tIn(uniqueVar1, destination, a)
+%   tIn(uniqueVar3, source, a)
+%   bOn(underscore, uniqueVar2, a)
+%   bOn(underscore, uniqueVar3, a)
+%   bOn(underscore, uniqueVar4, a)
+%   tIn(uniqueVar4, destination, a)
+%   bOn(underscore, uniqueVar1, a)
+%   tIn(underscore, destination, a)
+
+%%%%%  WILL-Produced Tree #2 @ 18:59:38 9/6/17.  [Using 1,898,616 memory cells.]  %%%%%
+
+% FOR value(A):
+%   if ( tIn(B, source, A), bOn(C, B, A) )
+%   then if ( tIn(D, destination, A) )
+%   | then if ( bOn(E, D, A) )
+%   | | then return 2.1862853408003084E-15;  // std dev = 23.355, 78.000 (wgt'ed) examples reached here.  /* #pos=78 */
+%   | | else return -7.105427357601002E-16;  // std dev = 7.252, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+%   | else return -2.365085495154754;  // std dev = 20.960, 8.000 (wgt'ed) examples reached here.  /* #pos=8 */
+%   else if ( tIn(F, source, A), tIn(G, destination, A) )
+%   | then return 0;  // std dev = 0.000, 7.000 (wgt'ed) examples reached here.  /* #pos=7 */
+%   | else return 3.7841367922475966;  // std dev = 10.363, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+
+
+% Clauses:
+
+value(A, 2.1862853408003084E-15) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     tIn(D, destination, A), 
+     bOn(E, D, A), 
+     !. // Clause #1.
+
+value(A, -7.105427357601002E-16) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     tIn(D, destination, A), 
+     !. // Clause #2.
+
+value(A, -2.365085495154754) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     !. // Clause #3.
+
+value(A, 0) :- 
+     tIn(B, source, A), 
+     tIn(C, destination, A), 
+     !. // Clause #4.
+
+value(A, 3.7841367922475966) :- !. // Clause #5.
+
+
+% The flattened versions of these clauses:
+
+flattened_value(a, 2.1862853408003084E-15) :-  /* #pos=78 */ 
+   tIn(uniqueVar5, source, a),
+   bOn(underscore, uniqueVar5, a),
+   tIn(uniqueVar6, destination, a),
+   bOn(underscore, uniqueVar6, a),
+   !. // Flattened version of clause #1.
+
+flattened_value(a, -7.105427357601002E-16) :-  /* #pos=5 */ 
+   tIn(uniqueVar7, source, a),
+   bOn(underscore, uniqueVar7, a),
+   tIn(underscore, destination, a),
+   !. // Flattened version of clause #2.
+
+flattened_value(a, -2.365085495154754) :-  /* #pos=8 */ 
+   tIn(uniqueVar8, source, a),
+   bOn(underscore, uniqueVar8, a),
+   !. // Flattened version of clause #3.
+
+flattened_value(a, 0) :-  /* #pos=7 */ 
+   tIn(underscore, source, a),
+   tIn(underscore, destination, a),
+   !. // Flattened version of clause #4.
+
+flattened_value(underscore, 3.7841367922475966) :-  /* #pos=5 */ 
+   !. // Flattened version of clause #5.
+
+
+% The unique flattened literals:
+%   tIn(uniqueVar5, source, a)
+%   bOn(underscore, uniqueVar5, a)
+%   bOn(underscore, uniqueVar6, a)
+%   tIn(uniqueVar8, source, a)
+%   tIn(uniqueVar6, destination, a)
+%   bOn(underscore, uniqueVar8, a)
+%   tIn(uniqueVar7, source, a)
+%   bOn(underscore, uniqueVar7, a)
+%   tIn(underscore, destination, a)
+%   tIn(underscore, source, a)
+
+%%%%%  WILL-Produced Tree #3 @ 18:59:40 9/6/17.  [Using 1,927,824 memory cells.]  %%%%%
+
+% FOR value(A):
+%   if ( tIn(B, source, A) )
+%   then if ( bOn(C, B, A) )
+%   | then if ( tIn(D, destination, A) )
+%   | | then if ( bOn(E, D, A) )
+%   | | | then return -5.101332461867386E-15;  // std dev = 23.355, 78.000 (wgt'ed) examples reached here.  /* #pos=78 */
+%   | | | else return -7.105427357601002E-16;  // std dev = 7.252, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+%   | | else return -1.7763568394002505E-15;  // std dev = 20.960, 8.000 (wgt'ed) examples reached here.  /* #pos=8 */
+%   | else return 1.2613789307491996;  // std dev = 2.360, 9.000 (wgt'ed) examples reached here.  /* #pos=9 */
+%   else return -3.7841367922475957;  // std dev = 0.000, 3.000 (wgt'ed) examples reached here.  /* #pos=3 */
+
+
+% Clauses:
+
+value(A, -5.101332461867386E-15) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     tIn(D, destination, A), 
+     bOn(E, D, A), 
+     !. // Clause #1.
+
+value(A, -7.105427357601002E-16) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     tIn(D, destination, A), 
+     !. // Clause #2.
+
+value(A, -1.7763568394002505E-15) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     !. // Clause #3.
+
+value(A, 1.2613789307491996) :- 
+     tIn(B, source, A), 
+     !. // Clause #4.
+
+value(A, -3.7841367922475957) :- !. // Clause #5.
+
+
+% The flattened versions of these clauses:
+
+flattened_value(a, -5.101332461867386E-15) :-  /* #pos=78 */ 
+   tIn(uniqueVar9, source, a),
+   bOn(underscore, uniqueVar9, a),
+   tIn(uniqueVar10, destination, a),
+   bOn(underscore, uniqueVar10, a),
+   !. // Flattened version of clause #1.
+
+flattened_value(a, -7.105427357601002E-16) :-  /* #pos=5 */ 
+   tIn(uniqueVar11, source, a),
+   bOn(underscore, uniqueVar11, a),
+   tIn(underscore, destination, a),
+   !. // Flattened version of clause #2.
+
+flattened_value(a, -1.7763568394002505E-15) :-  /* #pos=8 */ 
+   tIn(uniqueVar12, source, a),
+   bOn(underscore, uniqueVar12, a),
+   !. // Flattened version of clause #3.
+
+flattened_value(a, 1.2613789307491996) :-  /* #pos=9 */ 
+   tIn(underscore, source, a),
+   !. // Flattened version of clause #4.
+
+flattened_value(underscore, -3.7841367922475957) :-  /* #pos=3 */ 
+   !. // Flattened version of clause #5.
+
+
+% The unique flattened literals:
+%   bOn(underscore, uniqueVar11, a)
+%   tIn(uniqueVar12, source, a)
+%   bOn(underscore, uniqueVar12, a)
+%   tIn(uniqueVar10, destination, a)
+%   bOn(underscore, uniqueVar9, a)
+%   bOn(underscore, uniqueVar10, a)
+%   tIn(uniqueVar9, source, a)
+%   tIn(uniqueVar11, source, a)
+%   tIn(underscore, destination, a)
+%   tIn(underscore, source, a)
+
+%%%%%  WILL-Produced Tree #4 @ 18:59:41 9/6/17.  [Using 1,953,752 memory cells.]  %%%%%
+
+% FOR value(A):
+%   if ( tIn(B, destination, A) )
+%   then if ( tIn(C, source, A), bOn(D, C, A) )
+%   | then if ( bOn(E, B, A) )
+%   | | then return 2.1862853408003084E-15;  // std dev = 23.355, 78.000 (wgt'ed) examples reached here.  /* #pos=78 */
+%   | | else return -7.105427357601002E-16;  // std dev = 7.252, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+%   | else if ( bOn(F, B, A) )
+%   | | then return 0;  // std dev = 0.000, 3.000 (wgt'ed) examples reached here.  /* #pos=3 */
+%   | | else return -1.261378930749201;  // std dev = 0.000, 7.000 (wgt'ed) examples reached here.  /* #pos=7 */
+%   else return 0.882965251524437;  // std dev = 18.830, 10.000 (wgt'ed) examples reached here.  /* #pos=10 */
+
+
+% Clauses:
+
+value(A, 2.1862853408003084E-15) :- 
+     tIn(B, destination, A), 
+     tIn(C, source, A), 
+     bOn(D, C, A), 
+     bOn(E, B, A), 
+     !. // Clause #1.
+
+value(A, -7.105427357601002E-16) :- 
+     tIn(B, destination, A), 
+     tIn(C, source, A), 
+     bOn(D, C, A), 
+     !. // Clause #2.
+
+value(A, 0) :- 
+     tIn(B, destination, A), 
+     bOn(C, B, A), 
+     !. // Clause #3.
+
+value(A, -1.261378930749201) :- 
+     tIn(B, destination, A), 
+     !. // Clause #4.
+
+value(A, 0.882965251524437) :- !. // Clause #5.
+
+
+% The flattened versions of these clauses:
+
+flattened_value(a, 2.1862853408003084E-15) :-  /* #pos=78 */ 
+   tIn(uniqueVar13, destination, a),
+   tIn(uniqueVar14, source, a),
+   bOn(underscore, uniqueVar14, a),
+   bOn(underscore, uniqueVar13, a),
+   !. // Flattened version of clause #1.
+
+flattened_value(a, -7.105427357601002E-16) :-  /* #pos=5 */ 
+   tIn(underscore, destination, a),
+   tIn(uniqueVar15, source, a),
+   bOn(underscore, uniqueVar15, a),
+   !. // Flattened version of clause #2.
+
+flattened_value(a, 0) :-  /* #pos=3 */ 
+   tIn(uniqueVar16, destination, a),
+   bOn(underscore, uniqueVar16, a),
+   !. // Flattened version of clause #3.
+
+flattened_value(a, -1.261378930749201) :-  /* #pos=7 */ 
+   tIn(underscore, destination, a),
+   !. // Flattened version of clause #4.
+
+flattened_value(underscore, 0.882965251524437) :-  /* #pos=10 */ 
+   !. // Flattened version of clause #5.
+
+
+% The unique flattened literals:
+%   tIn(uniqueVar14, source, a)
+%   bOn(underscore, uniqueVar16, a)
+%   tIn(uniqueVar15, source, a)
+%   tIn(uniqueVar16, destination, a)
+%   bOn(underscore, uniqueVar13, a)
+%   tIn(uniqueVar13, destination, a)
+%   bOn(underscore, uniqueVar15, a)
+%   bOn(underscore, uniqueVar14, a)
+%   tIn(underscore, destination, a)
+
+%%%%%  WILL-Produced Tree #5 @ 18:59:43 9/6/17.  [Using 1,964,816 memory cells.]  %%%%%
+
+% FOR value(A):
+%   if ( tIn(B, source, A), bOn(C, B, A) )
+%   then if ( tIn(D, destination, A) )
+%   | then if ( bOn(E, D, A) )
+%   | | then return -5.101332461867386E-15;  // std dev = 23.355, 78.000 (wgt'ed) examples reached here.  /* #pos=78 */
+%   | | else return -7.105427357601002E-16;  // std dev = 7.252, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+%   | else return -0.8829652515244408;  // std dev = 20.960, 8.000 (wgt'ed) examples reached here.  /* #pos=8 */
+%   else if ( tIn(F, source, A), tIn(G, destination, A) )
+%   | then return 0;  // std dev = 0.000, 7.000 (wgt'ed) examples reached here.  /* #pos=7 */
+%   | else return 1.4127444024391025;  // std dev = 3.869, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+
+
+% Clauses:
+
+value(A, -5.101332461867386E-15) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     tIn(D, destination, A), 
+     bOn(E, D, A), 
+     !. // Clause #1.
+
+value(A, -7.105427357601002E-16) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     tIn(D, destination, A), 
+     !. // Clause #2.
+
+value(A, -0.8829652515244408) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     !. // Clause #3.
+
+value(A, 0) :- 
+     tIn(B, source, A), 
+     tIn(C, destination, A), 
+     !. // Clause #4.
+
+value(A, 1.4127444024391025) :- !. // Clause #5.
+
+
+% The flattened versions of these clauses:
+
+flattened_value(a, -5.101332461867386E-15) :-  /* #pos=78 */ 
+   tIn(uniqueVar17, source, a),
+   bOn(underscore, uniqueVar17, a),
+   tIn(uniqueVar18, destination, a),
+   bOn(underscore, uniqueVar18, a),
+   !. // Flattened version of clause #1.
+
+flattened_value(a, -7.105427357601002E-16) :-  /* #pos=5 */ 
+   tIn(uniqueVar19, source, a),
+   bOn(underscore, uniqueVar19, a),
+   tIn(underscore, destination, a),
+   !. // Flattened version of clause #2.
+
+flattened_value(a, -0.8829652515244408) :-  /* #pos=8 */ 
+   tIn(uniqueVar20, source, a),
+   bOn(underscore, uniqueVar20, a),
+   !. // Flattened version of clause #3.
+
+flattened_value(a, 0) :-  /* #pos=7 */ 
+   tIn(underscore, source, a),
+   tIn(underscore, destination, a),
+   !. // Flattened version of clause #4.
+
+flattened_value(underscore, 1.4127444024391025) :-  /* #pos=5 */ 
+   !. // Flattened version of clause #5.
+
+
+% The unique flattened literals:
+%   tIn(uniqueVar17, source, a)
+%   bOn(underscore, uniqueVar17, a)
+%   tIn(uniqueVar18, destination, a)
+%   tIn(uniqueVar19, source, a)
+%   bOn(underscore, uniqueVar19, a)
+%   bOn(underscore, uniqueVar18, a)
+%   tIn(uniqueVar20, source, a)
+%   tIn(underscore, destination, a)
+%   bOn(underscore, uniqueVar20, a)
+%   tIn(underscore, source, a)
+
+%%%%%  WILL-Produced Tree #6 @ 18:59:44 9/6/17.  [Using 1,972,000 memory cells.]  %%%%%
+
+% FOR value(A):
+%   if ( tIn(B, source, A) )
+%   then if ( bOn(C, B, A) )
+%   | then if ( tIn(D, destination, A) )
+%   | | then if ( bOn(E, D, A) )
+%   | | | then return 2.1862853408003084E-15;  // std dev = 23.355, 78.000 (wgt'ed) examples reached here.  /* #pos=78 */
+%   | | | else return -7.105427357601002E-16;  // std dev = 7.252, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+%   | | else return -1.7763568394002505E-15;  // std dev = 20.960, 8.000 (wgt'ed) examples reached here.  /* #pos=8 */
+%   | else return 0.47091480081303416;  // std dev = 0.881, 9.000 (wgt'ed) examples reached here.  /* #pos=9 */
+%   else return -1.4127444024391025;  // std dev = 0.000, 3.000 (wgt'ed) examples reached here.  /* #pos=3 */
+
+
+% Clauses:
+
+value(A, 2.1862853408003084E-15) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     tIn(D, destination, A), 
+     bOn(E, D, A), 
+     !. // Clause #1.
+
+value(A, -7.105427357601002E-16) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     tIn(D, destination, A), 
+     !. // Clause #2.
+
+value(A, -1.7763568394002505E-15) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     !. // Clause #3.
+
+value(A, 0.47091480081303416) :- 
+     tIn(B, source, A), 
+     !. // Clause #4.
+
+value(A, -1.4127444024391025) :- !. // Clause #5.
+
+
+% The flattened versions of these clauses:
+
+flattened_value(a, 2.1862853408003084E-15) :-  /* #pos=78 */ 
+   tIn(uniqueVar21, source, a),
+   bOn(underscore, uniqueVar21, a),
+   tIn(uniqueVar22, destination, a),
+   bOn(underscore, uniqueVar22, a),
+   !. // Flattened version of clause #1.
+
+flattened_value(a, -7.105427357601002E-16) :-  /* #pos=5 */ 
+   tIn(uniqueVar23, source, a),
+   bOn(underscore, uniqueVar23, a),
+   tIn(underscore, destination, a),
+   !. // Flattened version of clause #2.
+
+flattened_value(a, -1.7763568394002505E-15) :-  /* #pos=8 */ 
+   tIn(uniqueVar24, source, a),
+   bOn(underscore, uniqueVar24, a),
+   !. // Flattened version of clause #3.
+
+flattened_value(a, 0.47091480081303416) :-  /* #pos=9 */ 
+   tIn(underscore, source, a),
+   !. // Flattened version of clause #4.
+
+flattened_value(underscore, -1.4127444024391025) :-  /* #pos=3 */ 
+   !. // Flattened version of clause #5.
+
+
+% The unique flattened literals:
+%   tIn(uniqueVar21, source, a)
+%   bOn(underscore, uniqueVar21, a)
+%   tIn(uniqueVar22, destination, a)
+%   tIn(uniqueVar24, source, a)
+%   bOn(underscore, uniqueVar22, a)
+%   tIn(uniqueVar23, source, a)
+%   bOn(underscore, uniqueVar23, a)
+%   bOn(underscore, uniqueVar24, a)
+%   tIn(underscore, destination, a)
+%   tIn(underscore, source, a)
+
+%%%%%  WILL-Produced Tree #7 @ 18:59:46 9/6/17.  [Using 1,988,088 memory cells.]  %%%%%
+
+% FOR value(A):
+%   if ( tIn(B, destination, A) )
+%   then if ( tIn(C, source, A), bOn(D, C, A) )
+%   | then if ( bOn(E, B, A) )
+%   | | then return -5.101332461867386E-15;  // std dev = 23.355, 78.000 (wgt'ed) examples reached here.  /* #pos=78 */
+%   | | else return -7.105427357601002E-16;  // std dev = 7.252, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+%   | else if ( bOn(F, B, A) )
+%   | | then return 0;  // std dev = 0.000, 3.000 (wgt'ed) examples reached here.  /* #pos=3 */
+%   | | else return -0.4709148008130324;  // std dev = 0.000, 7.000 (wgt'ed) examples reached here.  /* #pos=7 */
+%   else return 0.3296403605691225;  // std dev = 18.758, 10.000 (wgt'ed) examples reached here.  /* #pos=10 */
+
+
+% Clauses:
+
+value(A, -5.101332461867386E-15) :- 
+     tIn(B, destination, A), 
+     tIn(C, source, A), 
+     bOn(D, C, A), 
+     bOn(E, B, A), 
+     !. // Clause #1.
+
+value(A, -7.105427357601002E-16) :- 
+     tIn(B, destination, A), 
+     tIn(C, source, A), 
+     bOn(D, C, A), 
+     !. // Clause #2.
+
+value(A, 0) :- 
+     tIn(B, destination, A), 
+     bOn(C, B, A), 
+     !. // Clause #3.
+
+value(A, -0.4709148008130324) :- 
+     tIn(B, destination, A), 
+     !. // Clause #4.
+
+value(A, 0.3296403605691225) :- !. // Clause #5.
+
+
+% The flattened versions of these clauses:
+
+flattened_value(a, -5.101332461867386E-15) :-  /* #pos=78 */ 
+   tIn(uniqueVar25, destination, a),
+   tIn(uniqueVar26, source, a),
+   bOn(underscore, uniqueVar26, a),
+   bOn(underscore, uniqueVar25, a),
+   !. // Flattened version of clause #1.
+
+flattened_value(a, -7.105427357601002E-16) :-  /* #pos=5 */ 
+   tIn(underscore, destination, a),
+   tIn(uniqueVar27, source, a),
+   bOn(underscore, uniqueVar27, a),
+   !. // Flattened version of clause #2.
+
+flattened_value(a, 0) :-  /* #pos=3 */ 
+   tIn(uniqueVar28, destination, a),
+   bOn(underscore, uniqueVar28, a),
+   !. // Flattened version of clause #3.
+
+flattened_value(a, -0.4709148008130324) :-  /* #pos=7 */ 
+   tIn(underscore, destination, a),
+   !. // Flattened version of clause #4.
+
+flattened_value(underscore, 0.3296403605691225) :-  /* #pos=10 */ 
+   !. // Flattened version of clause #5.
+
+
+% The unique flattened literals:
+%   tIn(uniqueVar26, source, a)
+%   tIn(uniqueVar27, source, a)
+%   bOn(underscore, uniqueVar28, a)
+%   tIn(uniqueVar28, destination, a)
+%   bOn(underscore, uniqueVar26, a)
+%   bOn(underscore, uniqueVar25, a)
+%   tIn(uniqueVar25, destination, a)
+%   tIn(underscore, destination, a)
+%   bOn(underscore, uniqueVar27, a)
+
+%%%%%  WILL-Produced Tree #8 @ 18:59:47 9/6/17.  [Using 1,998,608 memory cells.]  %%%%%
+
+% FOR value(A):
+%   if ( tIn(B, source, A), bOn(C, B, A) )
+%   then if ( tIn(D, destination, A) )
+%   | then if ( bOn(E, D, A) )
+%   | | then return 2.1862853408003084E-15;  // std dev = 23.355, 78.000 (wgt'ed) examples reached here.  /* #pos=78 */
+%   | | else return -7.105427357601002E-16;  // std dev = 7.252, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+%   | else return -0.32964036056912516;  // std dev = 20.960, 8.000 (wgt'ed) examples reached here.  /* #pos=8 */
+%   else if ( tIn(F, source, A), tIn(G, destination, A) )
+%   | then return 0;  // std dev = 0.000, 7.000 (wgt'ed) examples reached here.  /* #pos=7 */
+%   | else return 0.5274245769105989;  // std dev = 1.444, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+
+
+% Clauses:
+
+value(A, 2.1862853408003084E-15) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     tIn(D, destination, A), 
+     bOn(E, D, A), 
+     !. // Clause #1.
+
+value(A, -7.105427357601002E-16) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     tIn(D, destination, A), 
+     !. // Clause #2.
+
+value(A, -0.32964036056912516) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     !. // Clause #3.
+
+value(A, 0) :- 
+     tIn(B, source, A), 
+     tIn(C, destination, A), 
+     !. // Clause #4.
+
+value(A, 0.5274245769105989) :- !. // Clause #5.
+
+
+% The flattened versions of these clauses:
+
+flattened_value(a, 2.1862853408003084E-15) :-  /* #pos=78 */ 
+   tIn(uniqueVar29, source, a),
+   bOn(underscore, uniqueVar29, a),
+   tIn(uniqueVar30, destination, a),
+   bOn(underscore, uniqueVar30, a),
+   !. // Flattened version of clause #1.
+
+flattened_value(a, -7.105427357601002E-16) :-  /* #pos=5 */ 
+   tIn(uniqueVar31, source, a),
+   bOn(underscore, uniqueVar31, a),
+   tIn(underscore, destination, a),
+   !. // Flattened version of clause #2.
+
+flattened_value(a, -0.32964036056912516) :-  /* #pos=8 */ 
+   tIn(uniqueVar32, source, a),
+   bOn(underscore, uniqueVar32, a),
+   !. // Flattened version of clause #3.
+
+flattened_value(a, 0) :-  /* #pos=7 */ 
+   tIn(underscore, source, a),
+   tIn(underscore, destination, a),
+   !. // Flattened version of clause #4.
+
+flattened_value(underscore, 0.5274245769105989) :-  /* #pos=5 */ 
+   !. // Flattened version of clause #5.
+
+
+% The unique flattened literals:
+%   tIn(uniqueVar30, destination, a)
+%   bOn(underscore, uniqueVar31, a)
+%   tIn(uniqueVar32, source, a)
+%   bOn(underscore, uniqueVar30, a)
+%   bOn(underscore, uniqueVar32, a)
+%   tIn(uniqueVar29, source, a)
+%   bOn(underscore, uniqueVar29, a)
+%   tIn(uniqueVar31, source, a)
+%   tIn(underscore, destination, a)
+%   tIn(underscore, source, a)
+
+%%%%%  WILL-Produced Tree #9 @ 18:59:49 9/6/17.  [Using 2,003,488 memory cells.]  %%%%%
+
+% FOR value(A):
+%   if ( tIn(B, source, A) )
+%   then if ( bOn(C, B, A) )
+%   | then if ( tIn(D, destination, A) )
+%   | | then if ( bOn(E, D, A) )
+%   | | | then return -5.101332461867386E-15;  // std dev = 23.355, 78.000 (wgt'ed) examples reached here.  /* #pos=78 */
+%   | | | else return -7.105427357601002E-16;  // std dev = 7.252, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+%   | | else return -1.7763568394002505E-15;  // std dev = 20.960, 8.000 (wgt'ed) examples reached here.  /* #pos=8 */
+%   | else return 0.17580819230353326;  // std dev = 0.329, 9.000 (wgt'ed) examples reached here.  /* #pos=9 */
+%   else return -0.5274245769105992;  // std dev = 1.05e-08, 3.000 (wgt'ed) examples reached here.  /* #pos=3 */
+
+
+% Clauses:
+
+value(A, -5.101332461867386E-15) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     tIn(D, destination, A), 
+     bOn(E, D, A), 
+     !. // Clause #1.
+
+value(A, -7.105427357601002E-16) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     tIn(D, destination, A), 
+     !. // Clause #2.
+
+value(A, -1.7763568394002505E-15) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     !. // Clause #3.
+
+value(A, 0.17580819230353326) :- 
+     tIn(B, source, A), 
+     !. // Clause #4.
+
+value(A, -0.5274245769105992) :- !. // Clause #5.
+
+
+% The flattened versions of these clauses:
+
+flattened_value(a, -5.101332461867386E-15) :-  /* #pos=78 */ 
+   tIn(uniqueVar33, source, a),
+   bOn(underscore, uniqueVar33, a),
+   tIn(uniqueVar34, destination, a),
+   bOn(underscore, uniqueVar34, a),
+   !. // Flattened version of clause #1.
+
+flattened_value(a, -7.105427357601002E-16) :-  /* #pos=5 */ 
+   tIn(uniqueVar35, source, a),
+   bOn(underscore, uniqueVar35, a),
+   tIn(underscore, destination, a),
+   !. // Flattened version of clause #2.
+
+flattened_value(a, -1.7763568394002505E-15) :-  /* #pos=8 */ 
+   tIn(uniqueVar36, source, a),
+   bOn(underscore, uniqueVar36, a),
+   !. // Flattened version of clause #3.
+
+flattened_value(a, 0.17580819230353326) :-  /* #pos=9 */ 
+   tIn(underscore, source, a),
+   !. // Flattened version of clause #4.
+
+flattened_value(underscore, -0.5274245769105992) :-  /* #pos=3 */ 
+   !. // Flattened version of clause #5.
+
+
+% The unique flattened literals:
+%   tIn(uniqueVar36, source, a)
+%   tIn(uniqueVar35, source, a)
+%   bOn(underscore, uniqueVar33, a)
+%   tIn(uniqueVar34, destination, a)
+%   bOn(underscore, uniqueVar35, a)
+%   tIn(uniqueVar33, source, a)
+%   bOn(underscore, uniqueVar36, a)
+%   bOn(underscore, uniqueVar34, a)
+%   tIn(underscore, destination, a)
+%   tIn(underscore, source, a)
+
+%%%%%  WILL-Produced Tree #10 @ 18:59:51 9/6/17.  [Using 2,025,688 memory cells.]  %%%%%
+
+% FOR value(A):
+%   if ( tIn(B, destination, A) )
+%   then if ( tIn(C, source, A), bOn(D, C, A) )
+%   | then if ( bOn(E, B, A) )
+%   | | then return 2.1862853408003084E-15;  // std dev = 23.355, 78.000 (wgt'ed) examples reached here.  /* #pos=78 */
+%   | | else return -7.105427357601002E-16;  // std dev = 7.252, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+%   | else if ( bOn(F, B, A) )
+%   | | then return 0;  // std dev = 0.000, 3.000 (wgt'ed) examples reached here.  /* #pos=3 */
+%   | | else return -0.17580819230353306;  // std dev = 5.27e-09, 7.000 (wgt'ed) examples reached here.  /* #pos=7 */
+%   else return 0.12306573461247154;  // std dev = 18.749, 10.000 (wgt'ed) examples reached here.  /* #pos=10 */
+
+
+% Clauses:
+
+value(A, 2.1862853408003084E-15) :- 
+     tIn(B, destination, A), 
+     tIn(C, source, A), 
+     bOn(D, C, A), 
+     bOn(E, B, A), 
+     !. // Clause #1.
+
+value(A, -7.105427357601002E-16) :- 
+     tIn(B, destination, A), 
+     tIn(C, source, A), 
+     bOn(D, C, A), 
+     !. // Clause #2.
+
+value(A, 0) :- 
+     tIn(B, destination, A), 
+     bOn(C, B, A), 
+     !. // Clause #3.
+
+value(A, -0.17580819230353306) :- 
+     tIn(B, destination, A), 
+     !. // Clause #4.
+
+value(A, 0.12306573461247154) :- !. // Clause #5.
+
+
+% The flattened versions of these clauses:
+
+flattened_value(a, 2.1862853408003084E-15) :-  /* #pos=78 */ 
+   tIn(uniqueVar37, destination, a),
+   tIn(uniqueVar38, source, a),
+   bOn(underscore, uniqueVar38, a),
+   bOn(underscore, uniqueVar37, a),
+   !. // Flattened version of clause #1.
+
+flattened_value(a, -7.105427357601002E-16) :-  /* #pos=5 */ 
+   tIn(underscore, destination, a),
+   tIn(uniqueVar39, source, a),
+   bOn(underscore, uniqueVar39, a),
+   !. // Flattened version of clause #2.
+
+flattened_value(a, 0) :-  /* #pos=3 */ 
+   tIn(uniqueVar40, destination, a),
+   bOn(underscore, uniqueVar40, a),
+   !. // Flattened version of clause #3.
+
+flattened_value(a, -0.17580819230353306) :-  /* #pos=7 */ 
+   tIn(underscore, destination, a),
+   !. // Flattened version of clause #4.
+
+flattened_value(underscore, 0.12306573461247154) :-  /* #pos=10 */ 
+   !. // Flattened version of clause #5.
+
+
+% The unique flattened literals:
+%   tIn(uniqueVar39, source, a)
+%   tIn(uniqueVar38, source, a)
+%   bOn(underscore, uniqueVar37, a)
+%   tIn(uniqueVar40, destination, a)
+%   bOn(underscore, uniqueVar38, a)
+%   bOn(underscore, uniqueVar40, a)
+%   bOn(underscore, uniqueVar39, a)
+%   tIn(uniqueVar37, destination, a)
+%   tIn(underscore, destination, a)
+
+%%%%%  WILL-Produced Tree Combined @ 18:59:52 9/6/17.  [Using 2,035,848 memory cells.]  %%%%%
+
+% FOR value(A):
+%   if ( tIn(B, source, A), bOn(C, B, A) )
+%   then if ( tIn(D, destination, A) )
+%   | then if ( bOn(E, D, A) )
+%   | | then return -5.101332461867386E-15;  // std dev = 23.355, 78.000 (wgt'ed) examples reached here.  /* #pos=78 */
+%   | | else return -7.105427357601002E-16;  // std dev = 7.252, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+%   | else return -0.12306573461247705;  // std dev = 20.960, 8.000 (wgt'ed) examples reached here.  /* #pos=8 */
+%   else if ( tIn(F, source, A), tIn(G, destination, A) )
+%   | then return 0;  // std dev = 0.000, 7.000 (wgt'ed) examples reached here.  /* #pos=7 */
+%   | else return 0.19690517537995617;  // std dev = 0.539, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+
+
+% Clauses:
+
+value(A, -5.101332461867386E-15) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     tIn(D, destination, A), 
+     bOn(E, D, A), 
+     !. // Clause #1.
+
+value(A, -7.105427357601002E-16) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     tIn(D, destination, A), 
+     !. // Clause #2.
+
+value(A, -0.12306573461247705) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     !. // Clause #3.
+
+value(A, 0) :- 
+     tIn(B, source, A), 
+     tIn(C, destination, A), 
+     !. // Clause #4.
+
+value(A, 0.19690517537995617) :- !. // Clause #5.
+
+
+% The flattened versions of these clauses:
+
+flattened_value(a, -5.101332461867386E-15) :-  /* #pos=78 */ 
+   tIn(uniqueVar41, source, a),
+   bOn(underscore, uniqueVar41, a),
+   tIn(uniqueVar42, destination, a),
+   bOn(underscore, uniqueVar42, a),
+   !. // Flattened version of clause #1.
+
+flattened_value(a, -7.105427357601002E-16) :-  /* #pos=5 */ 
+   tIn(uniqueVar43, source, a),
+   bOn(underscore, uniqueVar43, a),
+   tIn(underscore, destination, a),
+   !. // Flattened version of clause #2.
+
+flattened_value(a, -0.12306573461247705) :-  /* #pos=8 */ 
+   tIn(uniqueVar44, source, a),
+   bOn(underscore, uniqueVar44, a),
+   !. // Flattened version of clause #3.
+
+flattened_value(a, 0) :-  /* #pos=7 */ 
+   tIn(underscore, source, a),
+   tIn(underscore, destination, a),
+   !. // Flattened version of clause #4.
+
+flattened_value(underscore, 0.19690517537995617) :-  /* #pos=5 */ 
+   !. // Flattened version of clause #5.
+
+
+% The unique flattened literals:
+%   tIn(uniqueVar41, source, a)
+%   tIn(uniqueVar44, source, a)
+%   tIn(uniqueVar43, source, a)
+%   tIn(uniqueVar42, destination, a)
+%   bOn(underscore, uniqueVar44, a)
+%   bOn(underscore, uniqueVar41, a)
+%   bOn(underscore, uniqueVar42, a)
+%   bOn(underscore, uniqueVar43, a)
+%   tIn(underscore, destination, a)
+%   tIn(underscore, source, a)
+
+%%%%%  WILL-Produced Tree #12 @ 18:59:54 9/6/17.  [Using 2,044,000 memory cells.]  %%%%%
+
+% FOR value(A):
+%   if ( tIn(B, source, A) )
+%   then if ( bOn(C, B, A) )
+%   | then if ( tIn(D, destination, A) )
+%   | | then if ( bOn(E, D, A) )
+%   | | | then return 2.1862853408003084E-15;  // std dev = 23.355, 78.000 (wgt'ed) examples reached here.  /* #pos=78 */
+%   | | | else return -7.105427357601002E-16;  // std dev = 7.252, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+%   | | else return -1.7763568394002505E-15;  // std dev = 20.960, 8.000 (wgt'ed) examples reached here.  /* #pos=8 */
+%   | else return 0.06563505845998602;  // std dev = 0.123, 9.000 (wgt'ed) examples reached here.  /* #pos=9 */
+%   else return -0.1969051753799569;  // std dev = 0.000, 3.000 (wgt'ed) examples reached here.  /* #pos=3 */
+
+
+% Clauses:
+
+value(A, 2.1862853408003084E-15) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     tIn(D, destination, A), 
+     bOn(E, D, A), 
+     !. // Clause #1.
+
+value(A, -7.105427357601002E-16) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     tIn(D, destination, A), 
+     !. // Clause #2.
+
+value(A, -1.7763568394002505E-15) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     !. // Clause #3.
+
+value(A, 0.06563505845998602) :- 
+     tIn(B, source, A), 
+     !. // Clause #4.
+
+value(A, -0.1969051753799569) :- !. // Clause #5.
+
+
+% The flattened versions of these clauses:
+
+flattened_value(a, 2.1862853408003084E-15) :-  /* #pos=78 */ 
+   tIn(uniqueVar45, source, a),
+   bOn(underscore, uniqueVar45, a),
+   tIn(uniqueVar46, destination, a),
+   bOn(underscore, uniqueVar46, a),
+   !. // Flattened version of clause #1.
+
+flattened_value(a, -7.105427357601002E-16) :-  /* #pos=5 */ 
+   tIn(uniqueVar47, source, a),
+   bOn(underscore, uniqueVar47, a),
+   tIn(underscore, destination, a),
+   !. // Flattened version of clause #2.
+
+flattened_value(a, -1.7763568394002505E-15) :-  /* #pos=8 */ 
+   tIn(uniqueVar48, source, a),
+   bOn(underscore, uniqueVar48, a),
+   !. // Flattened version of clause #3.
+
+flattened_value(a, 0.06563505845998602) :-  /* #pos=9 */ 
+   tIn(underscore, source, a),
+   !. // Flattened version of clause #4.
+
+flattened_value(underscore, -0.1969051753799569) :-  /* #pos=3 */ 
+   !. // Flattened version of clause #5.
+
+
+% The unique flattened literals:
+%   tIn(uniqueVar48, source, a)
+%   bOn(underscore, uniqueVar46, a)
+%   bOn(underscore, uniqueVar48, a)
+%   bOn(underscore, uniqueVar45, a)
+%   bOn(underscore, uniqueVar47, a)
+%   tIn(uniqueVar47, source, a)
+%   tIn(uniqueVar45, source, a)
+%   tIn(uniqueVar46, destination, a)
+%   tIn(underscore, destination, a)
+%   tIn(underscore, source, a)
+
+%%%%%  WILL-Produced Tree #13 @ 18:59:55 9/6/17.  [Using 2,055,976 memory cells.]  %%%%%
+
+% FOR value(A):
+%   if ( tIn(B, destination, A) )
+%   then if ( tIn(C, source, A), bOn(D, C, A) )
+%   | then if ( bOn(E, B, A) )
+%   | | then return -5.101332461867386E-15;  // std dev = 23.355, 78.000 (wgt'ed) examples reached here.  /* #pos=78 */
+%   | | else return -7.105427357601002E-16;  // std dev = 7.252, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+%   | else return -0.04594454092198994;  // std dev = 0.095, 10.000 (wgt'ed) examples reached here.  /* #pos=10 */
+%   else return 0.04594454092198674;  // std dev = 18.747, 10.000 (wgt'ed) examples reached here.  /* #pos=10 */
+
+
+% Clauses:
+
+value(A, -5.101332461867386E-15) :- 
+     tIn(B, destination, A), 
+     tIn(C, source, A), 
+     bOn(D, C, A), 
+     bOn(E, B, A), 
+     !. // Clause #1.
+
+value(A, -7.105427357601002E-16) :- 
+     tIn(B, destination, A), 
+     tIn(C, source, A), 
+     bOn(D, C, A), 
+     !. // Clause #2.
+
+value(A, -0.04594454092198994) :- 
+     tIn(B, destination, A), 
+     !. // Clause #3.
+
+value(A, 0.04594454092198674) :- !. // Clause #4.
+
+
+% The flattened versions of these clauses:
+
+flattened_value(a, -5.101332461867386E-15) :-  /* #pos=78 */ 
+   tIn(uniqueVar49, destination, a),
+   tIn(uniqueVar50, source, a),
+   bOn(underscore, uniqueVar50, a),
+   bOn(underscore, uniqueVar49, a),
+   !. // Flattened version of clause #1.
+
+flattened_value(a, -7.105427357601002E-16) :-  /* #pos=5 */ 
+   tIn(underscore, destination, a),
+   tIn(uniqueVar51, source, a),
+   bOn(underscore, uniqueVar51, a),
+   !. // Flattened version of clause #2.
+
+flattened_value(a, -0.04594454092198994) :-  /* #pos=10 */ 
+   tIn(underscore, destination, a),
+   !. // Flattened version of clause #3.
+
+flattened_value(underscore, 0.04594454092198674) :-  /* #pos=10 */ 
+   !. // Flattened version of clause #4.
+
+
+% The unique flattened literals:
+%   tIn(uniqueVar50, source, a)
+%   bOn(underscore, uniqueVar51, a)
+%   bOn(underscore, uniqueVar49, a)
+%   tIn(uniqueVar51, source, a)
+%   bOn(underscore, uniqueVar50, a)
+%   tIn(uniqueVar49, destination, a)
+%   tIn(underscore, destination, a)
+
+%%%%%  WILL-Produced Tree #14 @ 18:59:57 9/6/17.  [Using 2,067,928 memory cells.]  %%%%%
+
+% FOR value(A):
+%   if ( tIn(B, source, A), bOn(C, B, A) )
+%   then if ( tIn(D, destination, A) )
+%   | then if ( bOn(E, D, A) )
+%   | | then return 2.1862853408003084E-15;  // std dev = 23.355, 78.000 (wgt'ed) examples reached here.  /* #pos=78 */
+%   | | else return -7.105427357601002E-16;  // std dev = 7.252, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+%   | else return -0.04594454092198941;  // std dev = 20.960, 8.000 (wgt'ed) examples reached here.  /* #pos=8 */
+%   else if ( tIn(F, source, A), tIn(G, destination, A) )
+%   | then return -0.019690517537995333;  // std dev = 0.000, 7.000 (wgt'ed) examples reached here.  /* #pos=7 */
+%   | else return 0.10107799002837865;  // std dev = 0.151, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+
+
+% Clauses:
+
+value(A, 2.1862853408003084E-15) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     tIn(D, destination, A), 
+     bOn(E, D, A), 
+     !. // Clause #1.
+
+value(A, -7.105427357601002E-16) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     tIn(D, destination, A), 
+     !. // Clause #2.
+
+value(A, -0.04594454092198941) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     !. // Clause #3.
+
+value(A, -0.019690517537995333) :- 
+     tIn(B, source, A), 
+     tIn(C, destination, A), 
+     !. // Clause #4.
+
+value(A, 0.10107799002837865) :- !. // Clause #5.
+
+
+% The flattened versions of these clauses:
+
+flattened_value(a, 2.1862853408003084E-15) :-  /* #pos=78 */ 
+   tIn(uniqueVar52, source, a),
+   bOn(underscore, uniqueVar52, a),
+   tIn(uniqueVar53, destination, a),
+   bOn(underscore, uniqueVar53, a),
+   !. // Flattened version of clause #1.
+
+flattened_value(a, -7.105427357601002E-16) :-  /* #pos=5 */ 
+   tIn(uniqueVar54, source, a),
+   bOn(underscore, uniqueVar54, a),
+   tIn(underscore, destination, a),
+   !. // Flattened version of clause #2.
+
+flattened_value(a, -0.04594454092198941) :-  /* #pos=8 */ 
+   tIn(uniqueVar55, source, a),
+   bOn(underscore, uniqueVar55, a),
+   !. // Flattened version of clause #3.
+
+flattened_value(a, -0.019690517537995333) :-  /* #pos=7 */ 
+   tIn(underscore, source, a),
+   tIn(underscore, destination, a),
+   !. // Flattened version of clause #4.
+
+flattened_value(underscore, 0.10107799002837865) :-  /* #pos=5 */ 
+   !. // Flattened version of clause #5.
+
+
+% The unique flattened literals:
+%   bOn(underscore, uniqueVar54, a)
+%   tIn(uniqueVar53, destination, a)
+%   bOn(underscore, uniqueVar52, a)
+%   bOn(underscore, uniqueVar55, a)
+%   tIn(uniqueVar55, source, a)
+%   tIn(uniqueVar52, source, a)
+%   tIn(uniqueVar54, source, a)
+%   bOn(underscore, uniqueVar53, a)
+%   tIn(underscore, destination, a)
+%   tIn(underscore, source, a)
+
+%%%%%  WILL-Produced Tree #15 @ 18:59:59 9/6/17.  [Using 2,075,112 memory cells.]  %%%%%
+
+% FOR value(A):
+%   if ( tIn(B, source, A) )
+%   then if ( bOn(C, B, A) )
+%   | then if ( tIn(D, destination, A) )
+%   | | then if ( bOn(E, D, A) )
+%   | | | then return -5.101332461867386E-15;  // std dev = 23.355, 78.000 (wgt'ed) examples reached here.  /* #pos=78 */
+%   | | | else return -7.105427357601002E-16;  // std dev = 7.252, 5.000 (wgt'ed) examples reached here.  /* #pos=5 */
+%   | | else return -1.7763568394002505E-15;  // std dev = 20.960, 8.000 (wgt'ed) examples reached here.  /* #pos=8 */
+%   | else return 0.01837781636879596;  // std dev = 0.103, 9.000 (wgt'ed) examples reached here.  /* #pos=9 */
+%   else return -0.055133449106389065;  // std dev = 0.000, 3.000 (wgt'ed) examples reached here.  /* #pos=3 */
+
+
+% Clauses:
+
+value(A, -5.101332461867386E-15) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     tIn(D, destination, A), 
+     bOn(E, D, A), 
+     !. // Clause #1.
+
+value(A, -7.105427357601002E-16) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     tIn(D, destination, A), 
+     !. // Clause #2.
+
+value(A, -1.7763568394002505E-15) :- 
+     tIn(B, source, A), 
+     bOn(C, B, A), 
+     !. // Clause #3.
+
+value(A, 0.01837781636879596) :- 
+     tIn(B, source, A), 
+     !. // Clause #4.
+
+value(A, -0.055133449106389065) :- !. // Clause #5.
+
+
+% The flattened versions of these clauses:
+
+flattened_value(a, -5.101332461867386E-15) :-  /* #pos=78 */ 
+   tIn(uniqueVar56, source, a),
+   bOn(underscore, uniqueVar56, a),
+   tIn(uniqueVar57, destination, a),
+   bOn(underscore, uniqueVar57, a),
+   !. // Flattened version of clause #1.
+
+flattened_value(a, -7.105427357601002E-16) :-  /* #pos=5 */ 
+   tIn(uniqueVar58, source, a),
+   bOn(underscore, uniqueVar58, a),
+   tIn(underscore, destination, a),
+   !. // Flattened version of clause #2.
+
+flattened_value(a, -1.7763568394002505E-15) :-  /* #pos=8 */ 
+   tIn(uniqueVar59, source, a),
+   bOn(underscore, uniqueVar59, a),
+   !. // Flattened version of clause #3.
+
+flattened_value(a, 0.01837781636879596) :-  /* #pos=9 */ 
+   tIn(underscore, source, a),
+   !. // Flattened version of clause #4.
+
+flattened_value(underscore, -0.055133449106389065) :-  /* #pos=3 */ 
+   !. // Flattened version of clause #5.
+
+
+% The unique flattened literals:
+%   bOn(underscore, uniqueVar57, a)
+%   tIn(uniqueVar58, source, a)
+%   bOn(underscore, uniqueVar59, a)
+%   bOn(underscore, uniqueVar56, a)
+%   bOn(underscore, uniqueVar58, a)
+%   tIn(uniqueVar57, destination, a)
+%   tIn(uniqueVar56, source, a)
+%   tIn(underscore, destination, a)
+%   tIn(uniqueVar59, source, a)
+%   tIn(underscore, source, a)

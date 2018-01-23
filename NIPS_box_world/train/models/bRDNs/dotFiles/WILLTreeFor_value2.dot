@@ -1,0 +1,19 @@
+digraph G{ 
+1[label = "[tIn(B, source, A)]"];
+1 -> 2[label="True"];
+1 -> 3[label="False"];
+2[label = "[bOn(C, B, A)]"];
+2 -> 4[label="True"];
+2 -> 5[label="False"];
+4[label = "[tIn(D, destination, A)]"];
+4 -> 6[label="True"];
+4 -> 7[label="False"];
+6[label = "[bOn(E, D, A)]"];
+6 -> 8[label="True"];
+6 -> 9[label="False"];
+8[shape = box,label = "-0.000(0.500)"];
+9[shape = box,label = "-0.000(0.500)"];
+7[shape = box,label = "-0.000(0.500)"];
+5[shape = box,label = "1.261(0.779)"];
+3[shape = box,label = "-3.784(0.022)"];
+}

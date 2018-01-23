@@ -1,0 +1,9 @@
+regressionExample(value(s1),44.39304772979083).
+regressionExample(value(s2),44.40915924125716).
+regressionExample(value(s3),37.120169021673156).
+regressionExample(value(s4),52.09566967034782).
+regressionExample(value(s5),56.1340933977902).
+regressionExample(value(s6),56.1340933977902).
+regressionExample(value(s7),56.1340933977902).
+regressionExample(value(s8),56.1340933977902).
+regressionExample(value(s9),56.1340933977902).

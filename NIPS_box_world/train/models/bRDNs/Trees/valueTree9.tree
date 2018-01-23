@@ -1,0 +1,10 @@
+setParam: stringsAreCaseSensitive = true.
+
+usePrologVariables: true.
+
+
+(value(A, 2.1862853408003084E-15) :-  /* #pos=78 */ tIn(UniqueVar37, destination, A), tIn(UniqueVar38, source, A), bOn(_, UniqueVar38, A), bOn(_, UniqueVar37, A)).
+(value(A, -7.105427357601002E-16) :-  /* #pos=5 */ tIn(_, destination, A), tIn(UniqueVar39, source, A), bOn(_, UniqueVar39, A)).
+(value(A, 0) :-  /* #pos=3 */ tIn(UniqueVar40, destination, A), bOn(_, UniqueVar40, A)).
+(value(A, -0.17580819230353306) :-  /* #pos=7 */ tIn(_, destination, A)).
+value(_, 0.12306573461247154) /* #pos=10 */ .
